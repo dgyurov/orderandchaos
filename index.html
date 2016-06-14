@@ -1,14 +1,25 @@
 <!doctype HTML>
-
-
 <html>
     <head>
-        <title></title>
+        <title>Order and Chaos - Redemption</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
     </head>
     <body>
        <div class="container">
         <div class="top-bar">
+          <div class="mobile-menu" style="">
+					<ul id="popmenu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Story</a></li>
+						<li><a href="#">Concept Art</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Wiki</a></li>
+					</ul>
+				<div class="menu-btn"><a href="#" id="toggle"><img src="images/menu_btn.png" width="100" height="36" alt="" title=""></a></div>
+            </div>
+          
            <div class="top-bar-button-container">
                 <div class="signup-button"><a href="#">Signup</a></div>
                 <div class="login-button"><a href="">Login</a></div>
@@ -23,6 +34,11 @@
                 <li class="menu-item"><a href="#">Wiki</a></li>
             </ul>
         </div>
+        
+        <div class="row mobile-logo middle">
+          <a href="#"><img src="images/oandc-logo.png" alt="Logo" height="160" width="314"></a>
+        </div>
+        
         <div class="row">
         <div class="col-xs-12">
             <div class="milestone-header">
@@ -32,10 +48,25 @@
             </div>
             </div>
         </div>
+        
+        <div class="row">
+            <ul class="weapons-list middle">
+                <li><a href="#" id="cart-action"><div class="weapon-btn"></div></a></li>
+                <li><a href="#" id="dream-action"><div class="weapon-btn"></div></a></li>
+                <li><a href="#" id="exp-action"><div class="weapon-btn"></div></a></li>
+                <li><a href="#" id="gem-action"><div class="weapon-btn"></div></a></li>
+                <li><a href="#" id="vigor-action"><div class="weapon-btn"></div></a></li>
+            </ul>
+        </div>
+        <div class="row middle">
+            <div class="sword">
+            </div>
+        </div>
+        
         <div class="row center-block">
         <div class="col-xs-6 col-xs-offset-3">
         <div class="sns-container">
-            <div class="fb-sns col-md-4 col-xs-12">
+            <div class="fb-sns col-xs-12 col-md-4">
                 <a href="#"><div class="sns-btn">
                     <img src="images/fb-sns.png" alt="">
                     <div class="sns-text-cont">
@@ -45,7 +76,7 @@
                 </div>
                 </a>
             </div>
-            <div class="enlist-sns col-md-4 col-xs-12">
+            <div class="enlist-sns col-xs-12 col-md-4">
                <a href="#">
                 <div class="sns-btn">
                     <div class="sns-action-text center">Enlist now!</div>
@@ -53,7 +84,7 @@
                 </div>
                 </a>
             </div>
-            <div class="tweet-sns col-md-4 col-xs-12">
+            <div class="tweet-sns col-xs-12 col-md-4">
                <a href="#">
                 <div class="sns-btn">
                     <img src="images/tweet-sns.png" alt="">
@@ -75,63 +106,66 @@
                     </a>
                 </div>
             </div>
-        </div>       
-        <div class="row middle">
-           <div class="col-xs-6 right">
+        </div>
+                <div class="row"><div class="divider"></div></div>       
+        <div class="row middle-details cart-box">
+           <div class="col-xs-12 col-md-6 image-right imgrev">
             <img src="images/1.png" alt="">
             </div>
-            <div class="col-xs-6 left">
+            <div class="col-xs-12 col-md-6 textrev">
             <div class="weapon-title">Concept Art</div>
             <div class="weapon-details">Aenean mauris ligula, maximus ac vehicula nec, tempus eu ex. Mauris eget massa consequat risus rutrum fringilla eu ut erat. Integer mattis volutpat risus id elementum. Maecenas consequat purus ac nunc consectetur aliquet. Nulla ornare egestas euismod. Sed facilisis consequat purus, nec consequat metus auctor vel.</div>
             </div>
         </div>
         <div class="row"><div class="divider"></div></div>
-        <div class="row middle">
-
-            <div class="col-xs-6 right">
+        <div class="row middle-details dream-box">
+            
+            <div class="col-xs-12 col-md-6 image-right imgrev">
+                <img src="images/2.png" alt="">
+            </div>
+            
+            <div class="col-xs-12 col-md-6 textrev">
             <div class="weapon-title">Dream Debris</div>
             <div class="weapon-details">We are all born dreamers, but some dreams are more real than others. Use the dream debris to take on the Dream Dungeons for great rewards!</div>
             </div>
-            <div class="col-xs-6 left">
-            <img src="images/2.png" alt="">
-            </div>
+
         </div>
         <div class="row"><div class="divider"></div></div>
-        <div class="row middle">
-           <div class="col-xs-6 right">
+        <div class="row middle-details exp-box">
+           <div class="col-xs-12 col-md-6 image-right imgrev">
             <img src="images/3.png" alt="">
             </div>
-            <div class="col-xs-6 left">
+            <div class="col-xs-12 col-md-6 textrev">
             <div class="weapon-title">Experience Potion</div>
             <div class="weapon-details">Don't let something like exhaustion get in the way of your adventures. Improve your fighting experience by 100% for 24 hours!</div>
             </div>
         </div>
         <div class="row"><div class="divider"></div></div>
-        <div class="row middle">
-
-            <div class="col-xs-6 right">
+        <div class="row middle-details gem-box">
+            <div class="col-xs-12 col-md-6 image-right imgrev">
+                <img src="images/4.png" alt="">
+            </div>
+            <div class="col-xs-12 col-md-6 textrev">
             <div class="weapon-title">Gem of Luck</div>
             <div class="weapon-details">Are you a believer in fate or luck? Either way, this gem will help you unlock an extra row in your inventory.</div>
             </div>
-           <div class="col-xs-6 left">
-            <img src="images/4.png" alt="">
-            </div>
+
         </div>
         <div class="row"><div class="divider"></div></div>
-        <div class="row middle">
-           <div class="col-xs-6 right">
+        <div class="row middle-details vigor-box">
+           <div class="col-xs-12 col-md-6 image-right imgrev">
             <img src="images/5.png" alt="">
             </div>
-            <div class="col-xs-6 left">
+            <div class="col-xs-12 col-md-6 textrev">
             <div class="weapon-title">Vigor Elixir</div>
             <div class="weapon-details">When you feel your strength is leaving you and you cannot go on, this elixir will restore you and enable you to continue on your quests!</div>
             </div>
         </div>
-
+        <div class="row"><div class="divider"></div></div>
+        <a href="#top" id="btnTop">&#9650;</a>
         <footer>
            <div class="center"><img src="images/footer_logo.png" width="284" height="197" alt="" title=""></div>
             <div class="row">
-               <div class="col-xs-2 col-xs-offset-5">
                <div class="social-btns">
                 <div class="connect-on-fb">
                    <a href="#"><img style="margin-right: 15px;" src="images/Layer-15.png" alt=""></a>
@@ -143,10 +177,80 @@
                     <a href="#"><img src="images/logos-youtube-icon.png" alt=""></a>
                 </div>
                 </div>
-                </div>
             </div>
             <div class="row"><div class="col-xs-6 col-xs-offset-3 copyright">2016 Gameloft. All rights reserved. Gameloft and the Gameloft logo are trademarks of Gameloft in the U.S. and/or other countries. All other trademarks are the property of their respective owners.</div></div>
         </footer>
        </div>
+       <script type="text/javascript">
+           $(function(){
+             
+            function scrollTo(el){
+                var elOffset = el.offset().top;
+                var elHeight = el.height();
+                var windowHeight = $(window).height();
+                var offset;
+
+                if (elHeight < windowHeight) {
+                    offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+                }
+                else {
+                    offset = elOffset;
+                }
+                
+                $('html,body').animate({scrollTop: offset});
+            }
+               
+               $(window).scroll(function() {
+                if($(this).scrollTop() > 180) {
+                    $('#btnTop').fadeIn();
+                } else {
+                    $('#btnTop').fadeOut();
+                }
+               });
+                
+             $("a#toggle").click(function(){
+                $("#popmenu").slideToggle();
+                return false;
+             });
+               
+            $("a#cart-action").click(function(){
+                scrollTo($(".cart-box"));
+                return false;
+             });
+               
+            $("a#dream-action").click(function(){
+               scrollTo($(".dream-box"));
+                return false;
+             });
+               
+            $("a#exp-action").click(function(){
+                scrollTo($(".exp-box"));
+                return false;
+             });
+            $("a#gem-action").click(function(){
+                scrollTo($(".gem-box"));
+                return false;
+             });
+               
+            $("a#vigor-action").click(function(e){
+                scrollTo($(".vigor-box"));
+                return false;
+             });
+               
+            $("a#btnTop").click(function(e){
+                scrollTo($(".top-bar"));
+                return false;
+             });
+            
+            window.sr = ScrollReveal({ 
+                reset: true,
+                origin      : 'left',
+                distance    : '50px',
+                duration    : 700,
+            });
+            sr.reveal('.imgrev');
+            sr.reveal('.textrev',{ origin: 'right' });
+            });
+       </script>
     </body>
 </html>
