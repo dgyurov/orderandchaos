@@ -1,0 +1,250 @@
+@font-face {
+    font-family: LeagueGothic;
+    src: url(assets/fonts/LeagueGothic-Regular.otf);
+}
+
+@font-face {
+    font-family: LinBiolinum;
+    src: url(assets/fonts/LinBiolinum_R_0.ttf);
+}
+
+@font-face {
+    font-family: LinBiolinum;
+    src: url(assets/fonts/LinBiolinum_R_0.ttf);
+    font-weight: italic; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: url(images/bg-img.png) no-repeat;
+    background-color: #050607;
+    background-size: 100%;
+    background-position:0 51px; 
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fdfffc;
+}
+
+a, a:visited,     a:focus{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #f8b023;
+    text-decoration: none;
+}
+
+.top-bar{
+    background: url(images/top-bar.png) repeat-x;
+    width: 100%;
+    height: 51px;
+    color: white;
+    text-align: right;
+}
+
+.signup-button{
+    float: left;
+    font-family: LinBiolinum;
+    font-size: 16px;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.login-button{
+    float: left;
+    font-family: LinBiolinum;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.menu{
+    background: url(images/menu-bg.png) no-repeat;
+    background-size: 1200px 130px;
+    width: 1200px;
+    height: 130px;
+    margin: 0 auto;
+}
+.top-bar-button-container{
+    float: right;
+    text-align: right;
+    width: auto;
+    margin-top: 14px;
+    margin-right: 42px;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.header-title{
+    font-family: LeagueGothic;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f8b023;
+}
+
+.header-sub-title{
+    font-family: LinBiolinum;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e6e6e6;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    max-width: 799px;
+    margin: 0 auto;
+    line-height:36px;
+}
+.center{
+    text-align: center;
+}
+
+.menu-item{
+    font-family: LeagueGothic;
+    font-size: 32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 190px;
+    text-align: center;
+    height: 60px;
+    margin-top: 13px;
+}
+
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+
+.menu ul li:nth-child(2),li:nth-child(4){
+    margin-top: 25px;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.milestone-header{
+    margin-top: 30px;
+}
+.sns-btn{
+    width: 177px;
+    height: 125px;
+    background: url(images/sns-btn.png);
+    padding: 25px;
+}
+
+.sns-btn img{
+    float: left;
+    margin-top: 11px;
+}
+
+.sns-action-text{
+    color: #131313;
+    font-family: LeagueGothic;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 0.1px rgba(0, 0, 0, 1);
+}
+
+.sns-points-text{
+    font-family: LeagueGothic;
+    font-size: 30px;
+    color: #faf9a0;
+    line-height: 25px;
+}
+
+.sns-text-cont{
+    float: right;
+    text-align: right;
+}
+
+.sns-container{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 535px;
+}
+.fb-sns, .enlist-sns, .tweet-sns{
+    float: left;
+}
+
+.like-btn{
+    margin-top: 26px;
+    text-align: center;
+}
+
+.like-btn img{
+    width: 65px;
+}
+
+.divider{
+    width: 394px;
+    height: 18px;
+    background: url(images/divider.png) no-repeat;
+    margin: 10px auto;
+    padding: 0;
+    display: block;
+}
+
+.social-btns{
+    text-align: center;
+    height: 45px;
+    width: 250px;
+    margin:45px auto;
+}
+
+.connect-on-fb, .connect-on-twitter,
+.connect-on-ut img{
+    height: 43px;
+
+}
+
+.connect-on-fb, .connect-on-twitter,
+.connect-on-ut {
+    float: left;
+    height: 43px;
+    margin-right: 28px;
+}
+
+.copyright{
+    display: block;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.weapon-title{
+    font-family: LeagueGothic;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+
+.middle{
+display:flex;
+justify-content:center;
+align-items:center;
+}
