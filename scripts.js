@@ -1,5 +1,5 @@
 $(function () {
-
+    //A helper function useful for scrolling to an element
     function scrollTo(el) {
         var elOffset = el.offset().top;
         var elHeight = el.height();
@@ -16,12 +16,14 @@ $(function () {
             scrollTop: offset
         });
     }
+    //Fade the arrow in the beginning
     if ($(this).scrollTop() > 350) {
         $('#btnTop').fadeIn();
     } else {
         $('#btnTop').fadeOut();
     }
 
+    //Fade in if it exceeds the inital threshold
     $(window).scroll(function () {
         if ($(this).scrollTop() > 350) {
             $('#btnTop').fadeIn();
@@ -30,6 +32,7 @@ $(function () {
         }
     });
 
+    // On click jQuery events
     $("a#toggle").click(function () {
         $("#popmenu").slideToggle();
         return false;
@@ -64,7 +67,7 @@ $(function () {
         return false;
     });
 
-    // Sword
+    // The sword magic
     $(".cart-bg").on("mouseover", function () {
         $(".sword").css("background-image", "url(images/sword_1.png)");
     }).mouseout(function () {
@@ -111,6 +114,7 @@ $(function () {
         $(".gem-bg").toggleClass('gem-bg-hover');
     });
 
+    //Pop up buttons
     $(".signup-button").click(function () {
         $(".popup-container").css('display', 'flex');
         $(".signup-box").show();
@@ -124,24 +128,29 @@ $(function () {
     });
 
     $(".close-btn").click(function () {
-        $(".popup-container").css('display', 'none');
+        $(".popup-container").fadeOut(700);
         $(".login-box").hide();
         $(".signup-box").hide();
         return false;
     });
+    
+    //Setup the scroll reveal animations
     window.sr = ScrollReveal({
         reset: true,
         origin: 'left',
         distance: '100px',
         duration: 600,
     });
+    
     sr.reveal('.imgrev');
     sr.reveal('.textrev', {
         origin: 'right'
     });
+    
     sr.reveal('.gameloft-logo', {
         origin: 'top',
     });
+    
     sr.reveal('.social-btns', {
         reset: true,
         origin: 'top',
