@@ -1,3 +1,5 @@
+/*Init all unique fonts*/
+
 @font-face {
     font-family: LeagueGothic;
     src: url(assets/fonts/LeagueGothic-Regular.otf);
@@ -11,33 +13,133 @@
 @font-face {
     font-family: LinBiolinum;
     src: url(assets/fonts/LinBiolinum_R_0.ttf);
-    font-weight: italic; 
+    font-weight: italic;
 }
 
-body{
+
+/*General*/
+
+body {
     padding: 0;
     margin: 0;
     background: url(images/bg-img.png) no-repeat;
     background-color: #050607;
     background-size: 100%;
-    background-position:0 51px; 
+    background-position: 0 51px;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #fdfffc;
+    overflow: hidden;
 }
 
-a, a:visited,     a:focus{
+a,
+a:visited,
+a:focus {
     color: inherit;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: #f8b023;
     text-decoration: none;
 }
 
-.top-bar{
+.center {
+    text-align: center;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.divider {
+    width: 394px;
+    height: 18px;
+    background: url(images/divider.png) no-repeat;
+    margin: 40px auto;
+    padding: 0;
+    display: block;
+}
+
+.image-left {
+    text-align: left;
+}
+
+.image-right {
+    text-align: right;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+input {
+    width: 374px;
+    color: black;
+    height: 40px;
+    border: 0;
+    margin: 5px;
+    font-family: LinBiolinum;
+    font-size: 18px;
+    padding: 0 16px;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 99;
+    opacity: 0.95;
+}
+
+
+/*preload hover images*/
+
+body:after {
+    display: none;
+    content: url(images/sword_1.png) url(images/sword_2.png) url(images/sword_3.png) url(images/sword_4.png) url(images/sword_5.png) url(images/weapon1.png) url(images/weapon2.png) url(images/weapon3.png) url(images/weapon4.png) url(images/weapon5.png) url(images/sns-btn-hover.png) url(images/signup_box.png) url(images/login_box.png);
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(images/loader2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+
+
+/*Top bar*/
+
+.top-bar {
     background: url(images/top-bar.png) repeat-x;
     width: 100%;
     height: 51px;
@@ -45,46 +147,46 @@ a:hover{
     text-align: right;
 }
 
-.signup-button{
+.signup-button {
     float: left;
     font-family: LinBiolinum;
     font-size: 16px;
     margin-right: 20px;
     text-transform: uppercase;
+    -moz-animation-name: fadeIn;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
 }
 
-.login-button{
+.login-button {
     float: left;
     font-family: LinBiolinum;
     font-size: 16px;
     text-transform: uppercase;
-}
-.menu{
-    background: url(images/menu-bg.png) no-repeat;
-    background-size: 1200px 130px;
-    background-position: center;
-    max-width: 1200px;
-    height: 130px;
-    margin: 0 auto;
-
-    
-    -moz-animation-name: dropHeader;
+    -moz-animation-name: fadeIn;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 0.5s;
-
-    -webkit-animation-name: dropHeader;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 0.5s;
-
-    animation-name: dropHeader;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeIn;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    
+    animation-duration: 1s;
 }
-.top-bar-button-container{
+
+.top-bar-button-container {
     float: right;
     text-align: right;
     width: auto;
@@ -92,68 +194,31 @@ a:hover{
     margin-right: 42px;
 }
 
-.logo {
-    margin: 0 auto;
-    width: 400px;
-    text-align: center;
-    margin-top: -50px;
-}
 
-.header-title{
-    font-family: LeagueGothic;
-    font-size: 60px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #f8b023;
-    
-        -moz-animation-name: fadeInWithScale;
+/*Menu*/
+
+.menu {
+    background: url(images/menu-bg.png) no-repeat;
+    background-size: 1200px 130px;
+    background-position: center;
+    max-width: 1200px;
+    height: 130px;
+    margin: 0 auto;
+    -moz-animation-name: dropHeader;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
     -moz-animation-duration: 0.5s;
-
-    -webkit-animation-name: fadeInWithScale;
+    -webkit-animation-name: dropHeader;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-duration: 0.5s;
-
-    animation-name: fadeInWithScale;
+    animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
 }
 
-.header-sub-title{
-    font-family: LinBiolinum;
-    font-size: 36px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #e6e6e6;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    max-width: 799px;
-    margin: 0 auto;
-    line-height:36px;
-    
-        -moz-animation-name: fadeInWithScale;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 0.5s;
-
-    -webkit-animation-name: fadeInWithScale;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 0.5s;
-
-    animation-name: fadeInWithScale;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    
-}
-.center{
-    text-align: center;
-}
-
-.menu-item{
+.menu-item {
     font-family: LeagueGothic;
     font-size: 32px;
     color: #ffffff;
@@ -167,19 +232,18 @@ a:hover{
     margin-top: 13px;
 }
 
-.mobile-menu{
-    opacity:0;
+.mobile-menu {
+    opacity: 0;
     float: left;
     text-align: center;
     margin-left: 10px;
     position: absolute;
     z-index: 1;
     width: 186px;
-
 }
 
-.mobile-menu ul{
-list-style-type: none;
+.mobile-menu ul {
+    list-style-type: none;
     padding: 20px;
     background: url(images/menu_bg.jpg);
     border-radius: 0 0 20px 20px;
@@ -188,18 +252,18 @@ list-style-type: none;
     margin-top: -2px;
 }
 
-.mobile-menu ul li{
+.mobile-menu ul li {
     text-transform: uppercase;
     font-family: LinBiolinum;
     font-size: 20px;
     line-height: 40px;
 }
 
-#popmenu{
+#popmenu {
     display: none;
 }
 
-.menu ul{
+.menu ul {
     list-style-type: none;
     display: flex;
     padding-left: 10px;
@@ -207,36 +271,89 @@ list-style-type: none;
     margin: 0;
 }
 
-
-.menu ul li:nth-child(2),.menu ul li:nth-child(4){
+.menu ul li:nth-child(2),
+.menu ul li:nth-child(4) {
     margin-top: 25px;
 }
 
-.container {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.logo {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    margin-top: -50px;
 }
 
-.milestone-header{
+
+/*Header*/
+
+.header-title {
+    font-family: LeagueGothic;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f8b023;
+    -moz-animation-name: fadeInWithScale;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInWithScale;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeInWithScale;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.header-sub-title {
+    font-family: LinBiolinum;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e6e6e6;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    max-width: 799px;
+    margin: 0 auto;
+    line-height: 36px;
+    -moz-animation-name: fadeInWithScale;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInWithScale;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeInWithScale;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.milestone-header {
     margin-top: 30px;
 }
-.sns-btn{
+
+
+/*SNS*/
+
+.sns-btn {
     width: 177px;
     height: 125px;
     background: url(images/sns-btn.png);
     padding: 25px;
-
 }
 
-.sns-btn img{
+.sns-btn:hover {
+    background: url(images/sns-btn-hover.png);
+}
+
+.sns-btn img {
     float: left;
     margin-top: 11px;
-
 }
 
-.sns-action-text{
+.sns-action-text {
     color: #131313;
     font-family: LeagueGothic;
     font-size: 32px;
@@ -244,70 +361,71 @@ list-style-type: none;
     text-shadow: 0px 0px 0.1px rgba(0, 0, 0, 1);
 }
 
-.sns-points-text{
+.sns-points-text {
     font-family: LeagueGothic;
     font-size: 30px;
     color: #faf9a0;
     line-height: 25px;
 }
 
-.sns-text-cont{
+.sns-text-cont {
     float: right;
     text-align: right;
 }
 
-.sns-container{
+.sns-container {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     max-width: 535px;
 }
-.fb-sns, .enlist-sns, .tweet-sns{
+
+.fb-sns,
+.enlist-sns,
+.tweet-sns {
     float: left;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.like-btn{
+.like-btn {
     margin-top: 26px;
     text-align: center;
 }
 
-.like-btn img{
+.like-btn img {
     width: 65px;
 }
 
-.divider{
-    width: 394px;
-    height: 18px;
-    background: url(images/divider.png) no-repeat;
-    margin: 40px auto;
-    padding: 0;
-    display: block;
-}
 
-.social-btns{
+/*Social buttons*/
+
+.social-btns {
     text-align: center;
     height: 45px;
     width: 210px;
-    margin:50px auto;
+    margin: 50px auto;
 }
 
-.connect-on-fb, .connect-on-twitter,
-.connect-on-ut img{
+.connect-on-fb,
+.connect-on-twitter,
+.connect-on-ut img {
     height: 43px;
-
 }
 
-.connect-on-fb, .connect-on-twitter,
+.connect-on-fb,
+.connect-on-twitter,
 .connect-on-ut {
     float: left;
     height: 43px;
     margin-right: 28px;
 }
 
-.copyright{
+
+/*Footer*/
+
+.copyright {
     display: block;
     text-align: center;
     font-family: Helvetica, sans-serif;
@@ -316,165 +434,321 @@ list-style-type: none;
     margin-bottom: 30px;
 }
 
-.weapon-title{
+
+/*Weapon list*/
+
+.weapon-title {
     font-family: LeagueGothic;
     font-size: 40px;
     text-transform: uppercase;
 }
 
-.image-left{
-    text-align: left;
-}
-.image-right{
-    text-align: right;
-}
-
-.middle{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.middle-details{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.row{
-    margin:0;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.weapons-list{
+.weapons-list {
     list-style: none;
     margin-top: 60px;
-    padding-right: 35px;
+    padding-right: 50px;
+    -moz-animation-name: fadeInWithScale;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInWithScale;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeInWithScale;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
 }
 
-.weapon-btn{
-float: left;
+.weapon-btn {
+    float: left;
     width: 128px;
     height: 244px;
-    background: url(images/weapon1_bw.png) no-repeat;
-    background-size: contain;
+    background-size: contain !important;
     margin: 0px 13px;
-    margin-bottom: -80px;
+    margin-bottom: -60px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
-.weapon-btn a{
+.weapon-btn a {
     width: 100%;
     height: 100%;
 }
 
-.sword{
+.cart-bg {
+    background: url(images/weapon1_bw.png) no-repeat;
+}
+
+.cart-bg:hover,
+.cart-bg-hover {
+    background: url(images/weapon1.png) no-repeat;
+}
+
+.dream-bg {
+    background: url(images/weapon2_bw.png) no-repeat;
+}
+
+.dream-bg:hover,
+.dream-bg-hover {
+    background: url(images/weapon2.png) no-repeat;
+}
+
+.exp-bg {
+    background: url(images/weapon3_bw.png) no-repeat;
+}
+
+.exp-bg:hover,
+.exp-bg-hover {
+    background: url(images/weapon3.png) no-repeat;
+}
+
+.gem-bg {
+    background: url(images/weapon4_bw.png) no-repeat;
+}
+
+.gem-bg:hover,
+.gem-bg-hover {
+    background: url(images/weapon4.png) no-repeat;
+}
+
+.vigor-bg {
+    background: url(images/weapon5_bw.png) no-repeat;
+}
+
+.vigor-bg:hover,
+.vigor-bg-hover {
+    background: url(images/weapon5.png) no-repeat;
+}
+
+
+/*Sword*/
+
+.sword {
     width: 1140px;
     height: 241px;
     background: url(images/sword_0.png) no-repeat;
     background-size: contain;
+    -moz-animation-name: fadeInWithScale;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInWithScale;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeInWithScale;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
 }
 
 
-.mobile-logo{
+/*Reward boxes*/
+
+.cart-box,
+.dream-box,
+.exp-box,
+.gem-box,
+.vigor-box {
+    padding: 0 100px;
+}
+
+
+/*Back to top button*/
+
+#btnTop {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    line-height: 2.55em;
+    height: 2.5em;
+    width: 2.5em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(76, 76, 76, 0.53);
+    border-radius: 0.3em;
+}
+
+
+/*Particles*/
+
+#particles-js {
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: -100px;
+    pointer-events: none;
+}
+
+
+/*Popup divs*/
+
+.popup-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 562px;
+    height: 233px;
+    padding: 45px;
+    background: url(images/login_box.png) no-repeat;
+    position: relative;
+    display: none;
+    text-align: center;
+}
+
+.signup-box {
+    width: 562px;
+    height: 430px;
+    padding: 45px;
+    background: url(images/signup_box.png) no-repeat;
+    position: relative;
+    display: none;
+    text-align: center;
+}
+
+.close-btn {
+    width: 58px;
+    height: 57px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(images/close_btn.png);
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 148px;
+    height: 65px;
+    background: url(images/submit_btn.png) no-repeat;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    bottom: -10px;
+    left: 200px;
+}
+
+
+/*Responsive mobile code*/
+
+.mobile-logo {
     display: none;
 }
 
-.mobile-logo a img{
+.mobile-logo a img {
     margin-top: -50px;
 }
 
-
-@media (max-width: 992px) {
-.image-left,.image-right{
-    text-align: center;
-}
-    
-    .middle{
-        text-align: center;
-    }
-    
-    .middle-details{
-        display: block;
-        text-align: center;
-    }
-    
-    .weapon-details{
-        text-align: left;
-    }
-    footer{
-    margin-top: 60px;
-}
-    
-    .menu{
-        background-size: 992px 130px;
-    }
-    
-
-}
-
-
-@media (max-width: 1150px){
-      .menu{
-        background-size: 1090px 130px;
-    }  
-}
-
-@media (max-width: 1060px){
-      .menu{
-        background-size: 1030px 130px;
-    }  
-}
-
-@media (max-width: 960px){
-      .menu{
-        background-size: 880px 130px;
-    }  
-}
-
-
-@media (max-width: 810px){
-    
-    .menu{
+@media (max-width: 810px) {
+    .menu {
         opacity: 0;
         display: none;
     }
-    
-    .mobile-logo{
+    .mobile-logo {
         display: block;
-        
-    -moz-animation-name: fadeIn;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 1s;
-
-    -webkit-animation-name: fadeIn;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 1s;
-
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 1s;
+        -moz-animation-name: fadeIn;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-timing-function: ease-in;
+        -moz-animation-duration: 1s;
+        -webkit-animation-name: fadeIn;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-duration: 1s;
+        animation-name: fadeIn;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
     }
-    
-    .mobile-menu{
+    .mobile-menu {
         display: block;
-        opacity:1;
+        opacity: 1;
+    }
+    .weapon-btn {
+        margin-bottom: -150px;
+    }
+    .weapons-list {
+        padding-right: 110px;
+        padding-left: 120px;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-left,
+    .image-right {
+        text-align: center;
+    }
+    .middle {
+        text-align: center;
+    }
+    .middle-details {
+        display: block;
+        text-align: center;
+    }
+    .weapon-details {
+        text-align: center;
+    }
+    footer {
+        margin-top: 60px;
+    }
+    .menu {
+        background-size: 992px 130px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .menu {
+        background-size: 1090px 130px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .menu {
+        background-size: 1030px 130px;
+    }
+}
+
+@media (max-width: 960px) {
+    .menu {
+        background-size: 880px 130px;
+    }
+}
+
+@media (max-width: 610px) {
+    .weapon-btn {
+        margin-bottom: -210px;
+    }
+    .weapons-list {
+        padding-right: 70px;
+        padding-left: 70px;
     }
 }
 
 
-*:not(#popmenu):not(a){
--webkit-transition:all 1s ease;
- -moz-transition:all 1s ease;
--o-transition:all 1s ease;
-transition:all 1s ease;
-}
-
-/*Animations*/
-
+/*Keyframe animations*/
 
 @-moz-keyframes dropHeader {
     0% {
@@ -484,6 +758,7 @@ transition:all 1s ease;
         -moz-transform: translateY(0);
     }
 }
+
 @-webkit-keyframes dropHeader {
     0% {
         -webkit-transform: translateY(-130px);
@@ -492,6 +767,7 @@ transition:all 1s ease;
         -webkit-transform: translateY(0);
     }
 }
+
 @keyframes dropHeader {
     0% {
         transform: translateY(-130px);
@@ -501,119 +777,112 @@ transition:all 1s ease;
     }
 }
 
-@keyframes fadeIn{
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@-moz-keyframes fadeIn{
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-o-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-
-@keyframes fadeInWithScale{
-  0% {
-    opacity:0.5;
-    transform:  translate(0px,0px)  scaleX(1.50) scaleY(1.50) ;
-  }
-  100% {
-    opacity:1;
-    transform:  translate(0px,0px)  scaleX(1.00) scaleY(1.00) ;
-  }
+@keyframes fadeInWithScale {
+    0% {
+        opacity: 0.5;
+        transform: translate(0px, 0px) scaleX(1.50) scaleY(1.50);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+    }
 }
 
-@-moz-keyframes fadeInWithScale{
-  0% {
-    opacity:0.5;
-    -moz-transform:  translate(0px,51px)  scaleX(1.50) scaleY(1.50) ;
-  }
-  100% {
-    opacity:1;
-    -moz-transform:  translate(0px,51px)  scaleX(1.00) scaleY(1.00) ;
-  }
+@-moz-keyframes fadeInWithScale {
+    0% {
+        opacity: 0.5;
+        -moz-transform: translate(0px, 51px) scaleX(1.50) scaleY(1.50);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translate(0px, 51px) scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-webkit-keyframes fadeInWithScale {
-  0% {
-    opacity:0.5;
-    -webkit-transform:  translate(0px,51px)  scaleX(1.50) scaleY(1.50) ;
-  }
-  100% {
-    opacity:1;
-    -webkit-transform:  translate(0px,51px)  scaleX(1.00) scaleY(1.00) ;
-  }
+    0% {
+        opacity: 0.5;
+        -webkit-transform: translate(0px, 51px) scaleX(1.50) scaleY(1.50);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0px, 51px) scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-o-keyframes fadeInWithScale {
-  0% {
-    opacity:0.5;
-    -o-transform:  translate(0px,51px)  scaleX(1.50) scaleY(1.50) ;
-  }
-  100% {
-    opacity:1;
-    -o-transform:  translate(0px,51px)  scaleX(1.00) scaleY(1.00) ;
-  }
+    0% {
+        opacity: 0.5;
+        -o-transform: translate(0px, 51px) scaleX(1.50) scaleY(1.50);
+    }
+    100% {
+        opacity: 1;
+        -o-transform: translate(0px, 51px) scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-ms-keyframes fadeInWithScale {
-  0% {
-    opacity:0.5;
-    -ms-transform:  translate(0px,51px)  scaleX(1.50) scaleY(1.50) ;
-  }
-  100% {
-    opacity:1;
-    -ms-transform:  translate(0px,51px)  scaleX(1.00) scaleY(1.00) ;
-  }
+    0% {
+        opacity: 0.5;
+        -ms-transform: translate(0px, 51px) scaleX(1.50) scaleY(1.50);
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: translate(0px, 51px) scaleX(1.00) scaleY(1.00);
+    }
 }
 
 
+/*General animation */
 
-#btnTop {
-position: fixed;
-bottom: 1em;
-right: 1em;
-line-height: 2.55em;
-height: 2.5em;
-width: 2.5em;
-text-align: center;
-color: #fff;
-text-decoration: none;
-background: rgba(76, 76, 76, 0.53);
-border-radius: 0.3em;
+*:not(#popmenu):not(a):not(.weapon-btn):not(.sword) {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
