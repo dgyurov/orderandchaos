@@ -45,7 +45,7 @@
                 <div class="close-btn"></div>
             </div>
         </section>
-        <div class="top-bar">
+        <div class="top-bar paused">
             <div class="mobile-menu" style="">
                 <ul id="popmenu">
                     <li><a href="#">Home</a></li>
@@ -59,11 +59,11 @@
                 </div>
             </div>
             <div class="top-bar-button-container">
-                <div class="signup-button"><a href="#">Signup</a></div>
-                <div class="login-button"><a href="#">Login</a></div>
+                <div class="signup-button paused"><a href="#">Signup</a></div>
+                <div class="login-button paused"><a href="#">Login</a></div>
             </div>
         </div>
-        <div class="menu">
+        <div class="menu paused">
             <ul>
                 <li class="menu-item"><a href="#">Story</a></li>
                 <li class="menu-item"><a href="#">Concept Art</a></li>
@@ -80,13 +80,13 @@
         <header class="row">
             <div class="col-xs-12">
                 <div class="milestone-header">
-                    <div class="header-title">The road to redemption begins here!</div>
-                    <div class="header-sub-title">Pre-register, and be reborn with great rewards when the game launches!</div>
+                    <div class="header-title paused">The road to redemption begins here!</div>
+                    <div class="header-sub-title paused">Pre-register, and be reborn with great rewards when the game launches!</div>
                 </div>
             </div>
         </header>
         <div class="row">
-            <ul class="weapons-list middle">
+            <ul class="weapons-list middle paused">
                 <li id="cart-action" class="weapon-btn cart-bg"></li>
                 <li id="dream-action" class="weapon-btn dream-bg"></li>
                 <li id="exp-action" class="weapon-btn exp-bg"></li>
@@ -97,7 +97,7 @@
         <div class="row middle sword-cont">
             <div id="particles-js"></div>
 
-            <div class="sword">
+            <div class="sword paused">
             </div>
         </div>
         <div class="row center-block">
@@ -242,6 +242,12 @@
                 $('body').delay(350).css({
                     'overflow': 'visible'
                 });
+            setTimeout(function() {
+                $('.menu').toggleClass("paused");
+                $('.top-bar').toggleClass("paused"); $('.header-title').toggleClass("paused"); $('.header-sub-title').toggleClass("paused");   
+                $('.sword').toggleClass("paused"); $('.weapons-list').toggleClass("paused");  
+                $('.signup-button').toggleClass("paused"); $('.login-button').toggleClass("paused");  
+            }, 500);
             })
             //]]>
     </script>

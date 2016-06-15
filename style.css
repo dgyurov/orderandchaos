@@ -31,6 +31,7 @@ body {
     font-weight: 400;
     color: #fdfffc;
     overflow: hidden;
+    min-width: 503px;
 }
 
 a,
@@ -102,6 +103,18 @@ input {
     padding: 0 16px;
 }
 
+.paused {
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.imgrev img{
+    width: 100%;
+    max-width: 425px;
+}
 
 /* Preloader */
 

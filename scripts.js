@@ -147,9 +147,9 @@ $(function () {
         origin: 'right'
     });
     
-    sr.reveal('.gameloft-logo', {
-        origin: 'top',
-    });
+//    sr.reveal('.gameloft-logo', {
+//        origin: 'top',
+//    });
     
     sr.reveal('.social-btns', {
         reset: true,
